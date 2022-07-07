@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402430305695",
+    "project_id": "crm-sharq-club-ac5dd",
+    "storage_bucket": "crm-sharq-club-ac5dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402430305695:android:5b1ad795834fe59d2309aa",
+        "android_client_info": {
+          "package_name": "com.example.crm_sharq_club"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402430305695-3f7ika2859di0trkh2m49pusvq6410b4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLoRP8KGFNbUO0SX3c-65UL-2uAQtUBfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402430305695-3f7ika2859di0trkh2m49pusvq6410b4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
