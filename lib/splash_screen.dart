@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:crm_sharq_club/features/customer/cars/presentation/bloc/get_cars/getcars_bloc.dart';
+import 'package:crm_sharq_club/features/customer/cars/presentation/page/car_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,8 +10,6 @@ import 'core/utils/app_themes.dart';
 import 'core/widgets/loading_widget.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 import 'features/auth/presentation/pages/sign%20up_page.dart';
-import 'features/todo/presentation/bloc/get_todos/todo_bloc.dart';
-import 'features/todo/presentation/pages/todos_page.dart';
 import 'injection_container.dart';
 
 
@@ -29,10 +29,10 @@ class _SplashScreenState extends State<SplashScreen> {
             if (state is LoadedUserState) {
               // Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>Succes()));
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => BlocProvider<TodoBloc>(
+                  builder: (BuildContext context) => BlocProvider<GetCarBloc>(
                     create: (context) =>
-                    sl<TodoBloc>()..add(GetAllTodosEvent()),
-                    child: TodosPage(),
+                    sl<GetCarBloc>()..add(GetAllCarEvent()),
+                    child: CarListPage(),
                   )));
             } else if (state is AuthInitial) {
               Navigator.of(context).pushReplacement(MaterialPageRoute(

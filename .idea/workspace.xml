@@ -9,7 +9,71 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e2778d7-e4d6-45cd-872e-0b83b9d69f52" name="Changes" comment="customer" />
+    <list default="true" id="9e2778d7-e4d6-45cd-872e-0b83b9d69f52" name="Changes" comment="customer">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/data/datasource/car_local_ds.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/data/datasource/car_remote_ds.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/data/model/car_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/data/repository/car_repository_impl.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/entity/car.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/repository/car_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/usecase/add_new_car_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/usecase/delete_car_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/usecase/get_cars_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/domain/usecase/update_car_usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/add_delete_update_car/add_delete_update_car_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/add_delete_update_car/add_delete_update_car_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/add_delete_update_car/add_delete_update_car_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/get_cars/getcars_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/get_cars/getcars_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/get_cars/getcars_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/page/add_edit_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/page/car_list_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/widgets/sign_in_page/sign_in_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/auth/presentation/widgets/sign_in_page/sign_in_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/widgets/sign_up_page/sign up_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/auth/presentation/widgets/sign_up_page/sign up_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/customer/services_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/services_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/data/datasources/todo_local_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/data/datasources/todo_remote_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/data/model/todo_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/data/repository/todo_repository_impl.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/entity/todo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/repository/todo_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/usecase/add_todo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/usecase/delete_todo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/usecase/get_todos.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/domain/usecase/update_todo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/add_delete_update_todo/add_delete_update_todo_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/add_delete_update_todo/add_delete_update_todo_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/add_delete_update_todo/add_delete_update_todo_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/get_todos/todo_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/get_todos/todo_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/get_todos/todo_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/internet_moniter/internet_monitor_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/internet_moniter/internet_monitor_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/internet_moniter/internet_monitor_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/internet_moniter/internet_monitor_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/bloc/internet_moniter/internet_monitor_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc/internet_moniter/internet_monitor_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/pages/add_edit_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/pages/todos_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/widgets/add_floating_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/widgets/add_floating_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/widgets/cached_image.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/widgets/empty_tasks.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/widgets/no_internet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/widgets/no_internet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/todo/presentation/widgets/todo_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/customer/cars/presentation/widgets/car_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/injection_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/injection_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/splash_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +82,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Script" />
         <option value="Dart File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="2" />
@@ -40,11 +113,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../FLUTTER/Android SDK" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/features/todo/presentation/bloc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/features/customer/cars/presentation/bloc" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -54,11 +128,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\lib\features\customer\cars\presentation\bloc" />
+      <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\lib\features\customer\cars\presentation\widgets" />
       <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\lib\features\todo\presentation\bloc" />
       <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\lib\features\todo\presentation\widgets" />
       <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club" />
-      <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\lib" />
-      <recent name="C:\Users\Azizbek\flutter_projects\crm_sharq_club\android\app" />
     </key>
   </component>
   <component name="RunManager">

@@ -1,17 +1,17 @@
 
+import 'package:crm_sharq_club/features/customer/cars/presentation/page/car_list_page.dart';
+import 'package:crm_sharq_club/features/customer/services_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 import '../../../../../core/utils/snackbar_message.dart';
-import '../../../../../core/utils/succes_page.dart';
 import '../../../../../core/widgets/loading_widget.dart';
 
 
 import '../../../../../injection_container.dart';
 
-import '../../../../todo/presentation/bloc/get_todos/todo_bloc.dart';
-import '../../../../todo/presentation/pages/todos_page.dart';
+import '../../../../customer/cars/presentation/bloc/get_cars/getcars_bloc.dart';
 import '../../bloc/auth_bloc.dart';
 import 'sign_in_submit_buttons.dart';
 
@@ -97,14 +97,14 @@ class _SignInFormState extends State<SignInForm> {
                 SnackBarMessage().showSuccessSnackBar(
                     message: state.message, context: context);
               } else if (state is LoadedUserState) {
-                // Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>Succes()));
+                // ?Naviga?tor.of(context).push(MaterialPageRoute(builder: (ctx)=>ServicesPage()));
                 Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                        builder: (ctx) => BlocProvider<TodoBloc>(
+                        builder: (ctx) => BlocProvider<GetCarBloc>(
                           create: (context) =>
-                          sl<TodoBloc>()..add(GetAllTodosEvent()),
-                          child: TodosPage(),
+                          sl<GetCarBloc>()..add(GetAllCarEvent()),
+                          child: CarListPage(),
                         )),
                         (_) => false);
               }

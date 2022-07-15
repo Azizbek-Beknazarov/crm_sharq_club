@@ -1,12 +1,12 @@
+import 'package:crm_sharq_club/features/customer/cars/presentation/bloc/get_cars/getcars_bloc.dart';
 import 'package:crm_sharq_club/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/utils/app_themes.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
-import 'features/todo/presentation/bloc/add_delete_update_todo/add_delete_update_todo_bloc.dart';
-import 'features/todo/presentation/bloc/get_todos/todo_bloc.dart';
-import 'features/todo/presentation/bloc/internet_moniter/internet_monitor_bloc.dart';
+import 'features/customer/cars/presentation/bloc/add_delete_update_car/add_delete_update_car_bloc.dart';
+import 'features/customer/cars/presentation/bloc/internet_moniter/internet_monitor_bloc.dart';
 import 'injection_container.dart' as di;
 import 'injection_container.dart';
 
@@ -27,13 +27,12 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(
               create: (_) => sl<AuthBloc>()..add(GetCurrentUserEvent())),
-          BlocProvider(create: (_) => sl<TodoBloc>()),
-          BlocProvider(create: (_) => sl<AddDeleteUpdateTodoBloc>()),
-          // BlocProvider(create: (_) => sl<NotificationBloc>()),
+          BlocProvider(create: (_) => sl<GetCarBloc>()),
+          BlocProvider(create: (_) => sl<AddDeleteUpdateCarBloc>()),
           BlocProvider<InternetMonitorBloc>(
             create: (_) =>
-            sl<InternetMonitorBloc>()..add(InternetMonitorEvent()),
-          ),
+            sl<InternetMonitorBloc>()..add(InternetMonitorEvent())),
+
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,

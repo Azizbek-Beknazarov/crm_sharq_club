@@ -1,3 +1,14 @@
+import 'package:crm_sharq_club/features/customer/cars/data/datasource/car_local_ds.dart';
+import 'package:crm_sharq_club/features/customer/cars/data/datasource/car_remote_ds.dart';
+import 'package:crm_sharq_club/features/customer/cars/data/repository/car_repository_impl.dart';
+import 'package:crm_sharq_club/features/customer/cars/domain/repository/car_repository.dart';
+import 'package:crm_sharq_club/features/customer/cars/domain/usecase/add_new_car_usecase.dart';
+import 'package:crm_sharq_club/features/customer/cars/domain/usecase/delete_car_usecase.dart';
+import 'package:crm_sharq_club/features/customer/cars/domain/usecase/get_cars_usecase.dart';
+import 'package:crm_sharq_club/features/customer/cars/domain/usecase/update_car_usecase.dart';
+import 'package:crm_sharq_club/features/customer/cars/presentation/bloc/add_delete_update_car/add_delete_update_car_bloc.dart';
+import 'package:crm_sharq_club/features/customer/cars/presentation/bloc/get_cars/getcars_bloc.dart';
+import 'package:crm_sharq_club/features/customer/cars/presentation/bloc/internet_moniter/internet_monitor_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:get_it/get_it.dart';
@@ -5,7 +16,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 import 'core/network/network_info.dart';
 
@@ -19,47 +29,31 @@ import 'features/auth/domain/usecase/login_user.dart';
 import 'features/auth/domain/usecase/logout.dart';
 import 'features/auth/domain/usecase/register_user.dart';
 import 'features/auth/presentation/bloc/auth_bloc.dart';
-import 'features/todo/data/datasources/todo_local_data_source.dart';
-import 'features/todo/data/datasources/todo_remote_data_source.dart';
-import 'features/todo/data/repository/todo_repository_impl.dart';
-import 'features/todo/domain/repository/todo_repository.dart';
-import 'features/todo/domain/usecase/add_todo.dart';
-import 'features/todo/domain/usecase/delete_todo.dart';
-import 'features/todo/domain/usecase/get_todos.dart';
-import 'features/todo/domain/usecase/update_todo.dart';
-import 'features/todo/presentation/bloc/add_delete_update_todo/add_delete_update_todo_bloc.dart';
-import 'features/todo/presentation/bloc/get_todos/todo_bloc.dart';
-import 'features/todo/presentation/bloc/internet_moniter/internet_monitor_bloc.dart';
 
-final sl = GetIt.instance;
+final GetIt sl = GetIt.instance;
 
 Future<void> init() async {
   //! Features
   // Bloc
 
-  sl.registerFactory(() => AuthBloc(
-    getCurrentUser: sl(),
-    registerUser: sl(),
-    loginUser: sl(),
-    logout: sl(),
-    googleSignInOrSignUp: sl(),
-  ));
+  sl.registerFactory(() =>
+      AuthBloc(
+        getCurrentUser: sl(),
+        registerUser: sl(),
+        loginUser: sl(),
+        logout: sl(),
+        googleSignInOrSignUp: sl(),
+      ));
 
-  sl.registerFactory(() => TodoBloc(
-    getTodos: sl(),
-  ));
+  sl.registerFactory(() =>
+      AddDeleteUpdateCarBloc(
+          addNewCarUseCase: sl(),
+          updateCarUseCase: sl(),
+          deleteCarUseCase: sl()));
 
-  sl.registerFactory(() => AddDeleteUpdateTodoBloc(
-    addTodo: sl(),
-    updateTodo: sl(),
-    deleteTodo: sl(),
-  ));
+  sl.registerFactory(() => GetCarBloc(getCarsUseCase: sl()));
 
-  sl.registerFactory(() => InternetMonitorBloc(
-    internetConnectionChecker: sl(),
-  ));
-
-
+  sl.registerFactory(() => InternetMonitorBloc(internetConnectionChecker: sl()));
 
   // Use cases
 
@@ -69,32 +63,27 @@ Future<void> init() async {
   sl.registerLazySingleton(() => Logout(sl()));
   sl.registerLazySingleton(() => GoogleSignInOrSignUp(sl()));
 
-
-
-  sl.registerLazySingleton(() => GetTodosUsecase(sl()));
-  sl.registerLazySingleton(() => AddTodoUsecase(sl()));
-  sl.registerLazySingleton(() => DeleteTodoUsecase(sl()));
-  sl.registerLazySingleton(() => UpdateTodoUsecase(sl()));
-
+  sl.registerLazySingleton(() => AddNewCarUseCase(sl()));
+  sl.registerLazySingleton(() => DeleteCarUseCase(sl()));
+  sl.registerLazySingleton(() => UpdateCarUseCase(sl()));
+  sl.registerLazySingleton(() => GetCarsUseCase(sl()));
 
   // Repository
 
   sl.registerLazySingleton<AuthRepository>(
-        () => AuthRepositoryImpl(
-      localDataSource: sl(),
-      networkInfo: sl(),
-      remoteDataSource: sl(),
-    ),
+        () =>
+        AuthRepositoryImpl(
+          localDataSource: sl(),
+          networkInfo: sl(),
+          remoteDataSource: sl(),
+        ),
   );
 
-  sl.registerLazySingleton<TodoRepository>(
-        () => TodoRepositoryImpl(
-      localDataSource: sl(),
-      networkInfo: sl(),
-      remoteDataSource: sl(),
-    ),
-  );
-
+  sl.registerLazySingleton<CarRepository>(() =>
+      CarRepositoryImpl(
+          carLocalDataSource: sl(),
+          carRemoteDataSource: sl(),
+          networkInfo: sl()));
 
 
   // Data sources
@@ -107,19 +96,16 @@ Future<void> init() async {
         () => AuthLocalDataSourceImpl(sharedPreferences: sl()),
   );
 
-  sl.registerLazySingleton<TodoLocalDataSource>(
-        () => TodoLocalDataSourceImpl(sharedPreferences: sl()),
-  );
-
+  sl.registerLazySingleton<CarLocalDataSource>(() =>
+      CarLocalDataSourceImpl(sharedPreferences: sl()));
 
   final sharedPreferences = await SharedPreferences.getInstance();
 
   AuthLocalDataSourceImpl authLocalDataSource =
   AuthLocalDataSourceImpl(sharedPreferences: sharedPreferences);
 
-  sl.registerLazySingleton<TodoRemoteDataSource>(
-        () => TodoRemoteDataSourceImpl(authLocalDataSource: authLocalDataSource),
-  );
+  sl.registerLazySingleton<CarRemoteDataSource>(() =>
+      CarRemoteDataSourceImpl(authLocalDataSourceImpl: authLocalDataSource));
 
   //! Core
 
